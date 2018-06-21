@@ -1,0 +1,44 @@
+<!--
+  Generated template for the RankingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>ranking</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <!-- <ion-grid>
+        <ion-row>
+            <ion-col>
+                Name
+            </ion-col>
+            <ion-col>
+                Scores
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngFor="let rank of ranking_arr">
+            <ion-col>{{rank.id}}</ion-col>
+            <ion-col>{{rank.scores}}</ion-col>
+        </ion-row>
+    </ion-grid> -->
+
+
+    <ion-list>
+        <ion-item *ngFor="let user of mUsers">
+            <ion-avatar item-left>
+                <img [src]="user.avatar||'assets/imgs/logo.png'">
+            </ion-avatar>
+            <h3>{{user.name}}</h3>
+            <p>{{user.score}}</p>
+
+        </ion-item>
+    </ion-list>
+</ion-content>

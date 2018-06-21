@@ -1,0 +1,205 @@
+page-game {
+    img {
+        position: fixed;
+    }
+    #error {
+        top: 0;
+        left: 0;
+    }
+    #sound {
+        top: 0;
+        left: 20%;
+    }
+    #share {
+        top: 0;
+        right: 0;
+    }
+    .scroll-content {
+        background: #0099FF;
+        padding: 0 !important;
+    }
+    #question {
+        width: 97%;
+        position: fixed;
+        bottom: 25%;
+        font-size: 15px;
+        background: yellow;
+        border-radius: 15px;
+        padding: 10px;
+        height: auto;
+        // margin: 5px;
+        margin-bottom: 68px;
+        margin-left: 5px;
+    }
+    #question:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 12px solid transparent;
+        border-right: 10px solid yellow;
+        border-top: 10px solid yellow;
+        border-bottom: 10px solid transparent;
+        left: 12px;
+        bottom: -19px;
+    }
+    #title-wrong {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        top: 5%;
+    }
+    #title-wrong>div {
+        position: absolute;
+        width: auto;
+        background: yellow;
+        padding: 10px 30px;
+        border-radius: 20px;
+        font-size: 1.2em;
+        -webkit-animation-name: example;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 4s;
+        /* Safari 4.0 - 8.0 */
+        -webkit-animation-delay: 2s;
+        /* Safari 4.0 - 8.0 */
+        animation-name: example;
+        animation-duration: 4s;
+        // animation-delay: 1s;
+        animation-iteration-count: 30000;
+    }
+    #title-wrong>div:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 12px solid transparent;
+        border-right: 10px solid yellow;
+        border-top: 10px solid yellow;
+        border-bottom: 10px solid transparent;
+        left: 12px;
+        bottom: -19px;
+    }
+    #result {
+        position: fixed;
+        bottom: 5%;
+    }
+    .result {
+        color: #0099FF;
+        background: white;
+        border-radius: 5px;
+        font-size: 1em;
+        /* padding: 10px; */
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+        margin: 2px !important;
+    }
+    div#info {
+        position: fixed;
+        bottom: 22%;
+        color: white;
+        width: 97%;
+        text-align: right;
+        font-size: 1.1em;
+        margin-bottom: 18px;
+    }
+    .answer_box {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #btn-next {
+        height: auto;
+        padding: 15px;
+        width: 100%;
+        background: red;
+        border-radius: 30px;
+        font-size: 1.4em;
+    }
+    #next {
+        position: fixed;
+        bottom: 20%;
+    }
+    #explain {
+        position: fixed;
+        bottom: 25%;
+        font-size: 15px;
+        background: yellow;
+        border-radius: 15px;
+        padding: 10px;
+        height: auto;
+        margin: 5px;
+        margin-bottom: 50px;
+    }
+    #explain:before {
+        content: "";
+        width: 0px;
+        height: 0px;
+        position: absolute;
+        border-left: 12px solid transparent;
+        border-right: 10px solid yellow;
+        border-top: 10px solid yellow;
+        border-bottom: 10px solid transparent;
+        left: 12px;
+        bottom: -19px;
+    }
+    #wrong {
+        height: 100%;
+        /* position: absolute; */
+        top: 20%;
+        padding-top: 50%;
+    }
+    #replay {
+        display: flex;
+        justify-content: center;
+    }
+    #replay>button {
+        width: auto;
+        padding: 15px 15px;
+        background: red;
+        border-radius: 20px;
+        font-size: 1.5em;
+    }
+    #info-detail {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40%;
+        color: white;
+    }
+    #info-detail>span {
+        color: orange;
+    }
+    #redirect {
+        display: flex;
+        justify-content: center;
+    }
+    #redirect>button {
+        background: white;
+        color: red;
+        width: 30%;
+        border-radius: 20px;
+        font-size: 1.5em;
+        height: auto;
+        padding: 7px 15px;
+    }
+    #image-face {
+        width: 70px;
+        left: 5px;
+    }
+    #image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #troll-image1 {
+        width: 70px;
+    }
+    #troll-image2 {
+        width: 70px;
+        top: 15%;
+    }
+}

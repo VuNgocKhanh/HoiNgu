@@ -1,0 +1,106 @@
+<!--
+  Generated template for the GamePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+
+
+<ion-content padding *ngIf="default">
+    <img src="assets/icon/bt_baoloi.png" alt="" id="error">
+    <img src="assets/icon/bt_soundon.png" alt="" (click)="turnSound()" id="sound">
+    <img src="assets/icon/bt_hoifb_press.png" alt="" id="share">
+
+
+    <div>
+        <div id="question" *ngIf="this.navParams.get('array').length > 0">
+            {{this.navParams.get('array')[random].cauhoi}}
+        </div>
+
+        <div id="info" *ngIf="this.navParams.get('array').length > 0">
+            <img src="{{troll_face}}" alt="" id="image-face"> Câu số: {{number_question}} <br> Của: {{this.navParams.get('array')[random].nickname}} <br> <span id="turn">Ngu: {{turn}} lượt </span><br>
+        </div>
+
+        <ion-grid id="result">
+            <ion-row>
+                <ion-col class="result">
+                    <div class="answer_box" *ngIf="this.navParams.get('array').length > 0" (click)="checkAnswer('a')">{{this.navParams.get('array')[random].a}} </div>
+                </ion-col>
+
+                <ion-col class="result">
+                    <div class="answer_box" *ngIf="this.navParams.get('array').length > 0" (click)="checkAnswer('b')">{{this.navParams.get('array')[random].b}}</div>
+                </ion-col>
+            </ion-row>
+
+
+            <ion-row>
+                <ion-col class="result">
+                    <div class="answer_box" *ngIf="this.navParams.get('array').length > 0" (click)="checkAnswer('c')"> {{this.navParams.get('array')[random].c}}</div>
+                </ion-col>
+
+                <ion-col class="result">
+                    <div class="answer_box" *ngIf="this.navParams.get('array').length > 0" (click)="checkAnswer('d')">{{this.navParams.get('array')[random].d}}</div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+
+    </div>
+</ion-content>
+
+<!-- Correct -->
+<ion-content *ngIf="correct">
+    <img src="assets/icon/bt_baoloi.png" alt="" id="error">
+    <img src="assets/icon/bt_soundon.png" alt="" (click)="turnSound()" id="sound">
+    <img src="assets/icon/bt_hoifb_press.png" alt="" id="share">
+    <ion-grid id="next">
+        <ion-row>
+            <div id="explain">{{explain}}</div>
+        </ion-row>
+
+        <ion-row>
+            <ion-col col-4 *ngIf="this.navParams.get('array').length > 0">
+                <div>
+                    <img src="{{troll_face}}" id="troll-image1">
+                </div>
+
+            </ion-col>
+            <ion-col>
+                <button ion-button (click)="goToNextQuestion()" id="btn-next">HỎI TIẾP ĐÊ >></button>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+</ion-content>
+
+<!-- Wrong -->
+<ion-content *ngIf="wrong">
+    <div id="title-wrong">
+        <div>Em đã rất cố gắng</div>
+    </div>
+
+    <div id="image">
+        <img src="{{troll_face}}" alt="" id="troll-image2">
+    </div>
+    <div id="wrong">
+        <div id="info-detail">
+            Đáp án: {{result}} <br> Điểm: {{number_question - 1}} <br> Điểm cao nhất : {{high_score}}
+        </div>
+
+        <div id="replay">
+            <button ion-button (click)="replay()">CAY QUÁ, CHƠI LẠI PHÁT</button>
+        </div>
+
+        <div id="redirect">
+            <button ion-button (click)="goToRank()">BXH</button>
+            <button ion-button (click)="goToMenu()">Menu</button>
+        </div>
+
+        <div *ngFor="let rank of ranking">
+            <p>{{rank.id}}</p>
+            <p>{{rank.scores}}</p>
+        </div>
+    </div>
+
+
+</ion-content>

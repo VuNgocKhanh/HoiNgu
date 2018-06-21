@@ -1,0 +1,34 @@
+<!-- <ion-header>
+    <ion-title>
+        Thực đơn nhà hàng
+    </ion-title>
+</ion-header> -->
+
+<ion-content>
+    <div id="name-game">
+        <div>HỎI NGU!</div>
+    </div>
+
+    <div id="troll-face">
+        <img src="{{troll_face}}" alt="" (click)="changeFace()" id="image">
+    </div>
+    <div id="content">
+
+        <div id="play" class="btns" (click)="play()">
+            <button ion-button>CHƠI GAME</button>
+        </div>
+        <div class="btns" id="table">
+            <button ion-button (click)="getRank()">BẢNG XẾP HÀNG</button>
+
+        </div>
+        <div class="btns" id="setting" (click)="setting()">
+            <button ion-button> CÀI ĐẶT</button>
+
+        </div>
+        <div class="btns" id="exit">
+            <button ion-button>THOÁT</button>
+
+        </div>
+
+    </div>
+</ion-content>

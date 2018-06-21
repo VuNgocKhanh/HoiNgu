@@ -1,0 +1,171 @@
+<!--
+  Generated template for the AddQuestionPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+        <ion-title>add-question</ion-title>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <!-- <div>
+        <form action="post" #addForm="ngForm">
+            <h5>Nickname</h5>
+            <div>
+                <ion-input [(ngModel)]="info.nickname" type="text" name="nickname"></ion-input>
+            </div>
+
+            <h5>Câu hỏi</h5>
+            <div>
+                <ion-input [(ngModel)]="info.question" type="text" name="question"></ion-input>
+            </div>
+
+            <h5>Câu trả lời 1</h5>
+            <div>
+                <ion-input [(ngModel)]="info.result_a" type="text" name="result_a"></ion-input>
+            </div>
+
+            <h5>Câu trả lời 2</h5>
+            <div>
+                <ion-input [(ngModel)]="info.result_b" type="text" name="result_b"></ion-input>
+            </div>
+
+            <h5>Câu trả lời 3</h5>
+            <div>
+                <ion-input [(ngModel)]="info.result_c" type="text" name="result_c"></ion-input>
+            </div>
+
+            <h5>Câu trả lời 4</h5>
+            <div>
+                <ion-input [(ngModel)]="info.result_d" type="text" name="result_d"></ion-input>
+            </div>
+
+            <h5>Đáp án đúng</h5>
+            <div>
+                <ion-input [(ngModel)]="info.correct_result" type="text" name="result_a"></ion-input>
+            </div>
+
+            <h5>Giải thích 1</h5>
+            <div>
+                <ion-input [(ngModel)]="info.explain_a" type="text" name="explain_a"></ion-input>
+            </div>
+
+            <h5>Giải thích 2</h5>
+            <div>
+                <ion-input [(ngModel)]="info.explain_b" type="text" name="explain_b"></ion-input>
+            </div>
+
+            <h5>Giải thích 3</h5>
+            <div>
+                <ion-input [(ngModel)]="info.explain_c" type="text" name="explain_c"></ion-input>
+            </div>
+
+            <h5>Giải thích 4</h5>
+            <div>
+                <ion-input [(ngModel)]="info.explain_d" type="text" name="explain_d"></ion-input>
+            </div>
+            <button ion-button (click)="addToFirebase(addForm)" type="submit" id="submit">Add</button>
+        </form>
+
+        <button (click)="call()">Call</button>
+    </div> -->
+
+    <form action="post" #addForm="ngForm">
+
+        <!--
+          <ion-input doesn't support autofocus
+          -->
+        <ion-item>
+            <ion-label floating>
+                Câu Hỏi
+            </ion-label>
+
+            <ion-input type="text" [(ngModel)]="info.question" name="question">
+            </ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Đáp án a
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.result_a" name="result_a"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Đáp án b
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.result_b" name="result_b"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Đáp án c
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.result_c" name="result_c"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Đáp án d
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.result_d" name="result_d"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Giải thích đáp án a
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.explain_a" name="explain_a"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Giải thích đáp án b
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.explain_b" name="explain_b"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Giải thích đáp án c
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.explain_c" name="explain_c"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Giải thích đáp án d
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.explain_d" name="explain_d"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Đáp án đúng
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.correct_result" name="correct_result"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                Nickname
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="info.nickname" name="nickname"></ion-input>
+        </ion-item>
+
+        <ion-row class="sign-in-button-container">
+            <ion-col text-center>
+                <button ion-button block color="secondary" (click)="addToFirebase(addForm)">
+                Thêm câu hỏi
+              </button>
+            </ion-col>
+        </ion-row>
+    </form>
+</ion-content>
